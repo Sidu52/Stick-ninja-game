@@ -27,27 +27,27 @@ Array.prototype.last = function () {
   
   // Configuration
   const canvasWidth = 375;
-  const canvasHeight = 375;
-  const platformHeight = 100;
+  const canvasHeight = 700;
+  const platformHeight = 220;
   const heroDistanceFromEdge = 10; // While waiting
   const paddingX = 100; // The waiting position of the hero in from the original canvas size
   const perfectAreaSize = 10;
   
   // The background moves slower than the hero
-  const backgroundSpeedMultiplier = 0.2;
+  const backgroundSpeedMultiplier = 0.4;
   
-  const hill1BaseHeight = 200;
+  const hill1BaseHeight = 400;
   const hill1Amplitude = 100;
   const hill1Stretch = 1;
-  const hill2BaseHeight = 90;
+  const hill2BaseHeight = 250;
   const hill2Amplitude = 120;
   const hill2Stretch = 0.5;
   
-  const stretchingSpeed = 4; // Milliseconds it takes to draw a pixel
-  const turningSpeed = 4; // Milliseconds it takes to turn a degree
-  const walkingSpeed = 4;
-  const transitioningSpeed = 2;
-  const fallingSpeed = 2;
+  const stretchingSpeed = 5; // Milliseconds it takes to draw a pixel
+  const turningSpeed = 5; // Milliseconds it takes to turn a degree
+  const walkingSpeed = 5;
+  const transitioningSpeed = 3;
+  const fallingSpeed = 4;
   
   const heroWidth = 20; // 24
   const heroHeight = 30; // 40
