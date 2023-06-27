@@ -149,12 +149,22 @@ Array.prototype.last = function () {
   
   // If space was pressed restart the game
 
+window.addEventListener("touchstart", function (event) {
+  event.preventDefault();
+  if (phase === "waiting") {
+    lastTimestamp = undefined;
+    introductionElement.style.opacity = 0;
+    phase = "stretching";
+    window.requestAnimationFrame(animate);
+  }
+}, { passive: false });
+
 window.addEventListener("touchend", function (event) {
+  event.preventDefault();
   if (phase === "stretching") {
     phase = "turning";
   }
-});
-
+}, { passive: false });
 window.addEventListener("mousedown", function (event) {
   if (phase == "waiting") {
     lastTimestamp = undefined;
