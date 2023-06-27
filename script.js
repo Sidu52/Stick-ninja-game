@@ -66,6 +66,8 @@ const scoreElement = document.getElementById("score");
 // Initialize layout
 resetGame();
 
+
+
 // Resets game variables and layouts but does not start the game (game starts on keypress)
 function resetGame() {
   // Reset game progress
@@ -155,7 +157,9 @@ window.addEventListener("keydown", function (event) {
     resetGame();
     return;
   }
-});
+}, { passive: false });
+
+
 
 window.addEventListener("touchstart", function (event) {
   event.preventDefault();
@@ -346,6 +350,11 @@ restartButton.addEventListener("click", function (event) {
   resetGame();
   restartButton.style.display = "none";
 });
+restartButton.addEventListener('touchstart', function (event) {
+  event.preventDefault(); // Prevent default touch behavior
+  resetGame(); // Call the resetGame function to handle the reset logic
+}, { passive: false });
+
 
 function drawPlatforms() {
   platforms.forEach(({ x, w }) => {
