@@ -1,4 +1,5 @@
-
+var c = document.getElementById('can');
+c.onselectstart = function () { return false; }
 // Extend the base functionality of JavaScript
 Array.prototype.last = function () {
     return this[this.length - 1];
